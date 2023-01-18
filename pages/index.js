@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import Layout from '../src/components/layout'
 
 const Home = () => {
   return (
