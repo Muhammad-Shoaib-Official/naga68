@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
             <Navbar />
             <Stack direction='row'>
                 <Sidebar />
-                <main>
+                <main style={{ flex: 1, background: "pink", maxWidth: 1040, margin: "0 auto" }}>
                     {children}
                 </main>
                 <RightSidebar />

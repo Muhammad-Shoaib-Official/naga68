@@ -1,8 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const RightSidebar = () => {
     return (
-        <div>RightSidebar</div>
+        <Box sx={{ minWidth: 330, background: "green" }}>RightSidebar</Box>
     )
 }
 

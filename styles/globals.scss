@@ -1,9 +1,26 @@
 @import './import.scss';
 
+@font-face {
+  font-family: montserrat;
+  font-weight: 700;
+  src: "../public/fonts/Montserrat-Bold.ttf";
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url("../public/fonts/Montserrat-Regular.ttf");
+  src: url("../public/fonts/Montserrat-SemiBold.ttf");
+  src: url("../public/fonts/Montserrat-Medium.ttf");
+  src: url("../public/fonts/Montserrat-Bold.ttf");
+  src: url("../public/fonts/Montserrat-ExtraBold.ttf");
+}
+
+* {
+  font-family: montserrat !important;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
