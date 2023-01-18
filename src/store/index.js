@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import signInSlice from './sign-in'
 const store = configureStore({
-    reducer: {}
+    reducer: {
+        signIn: signInSlice,
+    }
 })
 
 export default store
