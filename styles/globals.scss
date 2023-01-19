@@ -1,11 +1,11 @@
-@import './import.scss';
+@import "./_variables.scss";
+@import "./import.scss";
 
-@font-face {
-  font-family: montserrat;
-  font-weight: 700;
-  src: "../public/fonts/Montserrat-Bold.ttf";
-}
-
+// @font-face {
+//   font-family: montserrat;
+//   font-weight: 700;
+//   src: "../public/fonts/Montserrat-Bold.ttf";
+// }
 @font-face {
   font-family: montserrat;
   src: url("../public/fonts/Montserrat-Regular.ttf");
@@ -16,11 +16,206 @@
 }
 
 * {
-  font-family: montserrat !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+  background-color: $color_background-main;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  label {
+    font-size: $fs-16;
+  }
+
+  p {
+    margin: 0;
+    font-size: $fs-14;
+    font-weight: $fw-500;
+    line-height: $lh-20;
+    color: $color_grey-40;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .h1 {
+    font-size: $fs-34;
+    line-height: $lh-40;
+  }
+
+  .h2 {
+    font-size: $fs-30;
+    line-height: $lh-40;
+  }
+
+  .h3 {
+    font-size: $fs-24;
+    line-height: $lh-32;
+  }
+
+  .h4 {
+    font-size: $fs-20;
+    line-height: $lh-28;
+  }
+
+  .h5 {
+    font-size: $fs-18;
+    line-height: $lh-24;
+  }
+
+  .h6 {
+    font-size: $fs-16;
+    line-height: $lh-24;
+  }
+
+  // font weights common style
+  .fw-800 {
+    font-weight: $fw-800;
+  }
+
+  .fw-700 {
+    font-weight: $fw-700;
+  }
+
+  .fw-600 {
+    font-weight: $fw-600;
+  }
+
+  .fw-500 {
+    font-weight: $fw-500;
+  }
+
+  .fw-400 {
+    font-weight: $fw-400;
+  }
+
+  // flex common styles
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  // border Radius 50%
+  .br-50 {
+    border-radius: 50px;
+  }
+
+  .btn {
+    border-radius: $br-10;
+    display: inline-block;
+    border: none;
+    padding: 10px 14px;
+    color: $color_white;
+    cursor: pointer;
+    font-weight: $fw-600;
+    font-size: $fs-16;
+    line-height: $lh-22;
+    transition: all 0.3s linear;
+    opacity: 0.9;
+    background-color: transparent;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .btn-primary {
+    background-color: $color_blue;
+
+    &:hover {
+      background-color: $color_blue_hover;
+    }
+  }
+
+  .btn-secondary {
+    background-color: $color_red;
+
+    &:hover {
+      background-color: $color_red_hover;
+    }
+  }
+
+  .btn-lg_primary {
+    padding: 20px;
+    position: relative;
+  }
+
+
+  @media screen and (min-width:601px) and (max-width:900px) {
+    // headings common style
+    .h1 {
+      font-size: $fs-30;
+    }
+    .h2 {
+      font-size: $fs-28;
+    }
+    .h3 {
+      font-size: $fs-26;
+    }
+    .h4 {
+      font-size: $fs-22;
+    }
+    .h5 {
+      font-size: $fs-20;
+    }
+}
+
+  @media screen and (max-width:600px) {
+
+    // headings common style
+    .h1 {
+      font-size: $fs-28;
+    }
+  
+    .h2 {
+      font-size: $fs-26;
+    }
+  
+    .h3 {
+      font-size: $fs-22;
+    }
+  
+    .h4 {
+      font-size: $fs-20;
+    }
+  
+    .h5 {
+      font-size: $fs-18;
+    }
+  }
+
 }
