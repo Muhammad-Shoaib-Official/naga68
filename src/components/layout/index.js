@@ -1,9 +1,6 @@
 import { Stack } from '@mui/material'
 import React from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
-import RightSidebar from './rightSidebar'
-import Sidebar from './Sidebar'
+import { Sidebar, Navbar, RightSidebar, Footer } from '../export'
 
 const Layout = ({ children }) => {
     return (
