@@ -176,23 +176,28 @@ body {
 
 
   @media screen and (min-width:601px) and (max-width:900px) {
+
     // headings common style
     .h1 {
       font-size: $fs-30;
     }
+
     .h2 {
       font-size: $fs-28;
     }
+
     .h3 {
       font-size: $fs-26;
     }
+
     .h4 {
       font-size: $fs-22;
     }
+
     .h5 {
       font-size: $fs-20;
     }
-}
+  }
 
   @media screen and (max-width:600px) {
 
@@ -200,19 +205,19 @@ body {
     .h1 {
       font-size: $fs-28;
     }
-  
+
     .h2 {
       font-size: $fs-26;
     }
-  
+
     .h3 {
       font-size: $fs-22;
     }
-  
+
     .h4 {
       font-size: $fs-20;
     }
-  
+
     .h5 {
       font-size: $fs-18;
     }
