@@ -107,6 +107,19 @@ body {
     font-weight: $fw-400;
   }
 
+  // text tranformation
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
+
+  .lowercase {
+    text-transform: lowercase;
+  }
+
   // flex common styles
   .flex-center {
     display: flex;
