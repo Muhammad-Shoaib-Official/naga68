@@ -1,8 +1,7 @@
 // import { Add, KeyboardArrowDown, Settings } from "@mui/icons-material";
 // import { IAvartar, IHeaderNotification } from "../interfaces/headerInterface";
 import Image from "next/image";
-import { allGamesIcon, BonusIcon } from "../../public/assets/export";
-
+import { allGamesIcon, BonusIcon, vipRankIcon } from "../../public/assets/export";
 export const routes = [
   {
     path: "/all-games",
@@ -12,11 +11,11 @@ export const routes = [
   {
     path: "/rank-system",
     title: "VIP Rank System",
-    icon: BonusIcon,
+    icon: vipRankIcon,
   },
   {
-    path: "/rank-system",
-    title: "VIP Rank System",
+    path: "/all-bonuses",
+    title: "All Bonusses",
     icon: BonusIcon,
   },
 

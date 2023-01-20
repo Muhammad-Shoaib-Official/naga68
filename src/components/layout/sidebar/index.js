@@ -109,10 +109,12 @@ const Sidebar = () => {
                                         </Collapse>
                                     </>
                                 ) : (
-                                    <Link key={item?.path} href={item.path} as={item.path} onClick={(event) => {
-                                        event.preventDefault();
-                                        handleListItemClick(event, item.id)
-                                    }}>
+                                    <Link key={item?.path} href={item.path} as={item.path}
+                                    // onClick={(event) => {
+                                    //     event.preventDefault();
+                                    //     handleListItemClick(event, item.id)
+                                    // }}
+                                    >
 
                                         <ListItemButton component="div" selected={false
                                             // getBasePath(item.path) === getBasePath(router.asPath)
