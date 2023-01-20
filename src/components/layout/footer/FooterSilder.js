@@ -43,31 +43,31 @@ export default function SimpleSlider() {
     <div className="silder_mainn">
       <Slider {...settings}>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/01.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/02.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/03.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/04.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/05.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/06.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/07.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/08.png" alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
+          <Image src="/assets/footerimges/sliderimges/09.png" alt="Picture of the author" fill />
         </div>
       </Slider>
     </div>
