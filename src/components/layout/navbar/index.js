@@ -1,23 +1,43 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button, Box, Stack } from '@mui/material'
-import { HamburgurRight, HamburgurLift } from '../../../../public/assets/export'
+import { HamburgurRight, HamburgurLift, LogoIcon, MessageIcon } from '../../../../public/assets/export'
 import Image from 'next/image'
-// import HamburgurLeftIcon from '../../../public/assets/icons'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleSidebar } from '../../../store/layout'
+import { CustomSwitch, Logo } from '../../export'
 
 const Navbar = () => {
-    const [isShowLeftSideBar, setIsShowLeftSideBar] = useState(false)
+    const dispatch = useDispatch()
+    const { isShowLeftSideBar } = useSelector(state => state.layout)
+    const toggleLeftSidebar = () => {
+        dispatch(toggleSidebar("isShowLeftSideBar"))
+    }
+
     return (
         <>
-            <Stack minHeight={65} alignItems="center" justifyContent={"space-between"}>
-                <Box>
-                    <Button onClick={() => setIsShowLeftSideBar(!isShowLeftSideBar)}>
-                        {isShowLeftSideBar ?
-                            <Image src={HamburgurRight} alt={"HamburgurRight"} /> :
-                            <Image src={HamburgurLift} alt={"HamburgurRight"} />
-                        }
-                    </Button>
+            <Stack className='navbar' minHeight={65} direction="row" alignItems="center" justifyContent={"space-between"}>
+                <Box className="flex-center">
+                    <Box className="logo">
+                        <Box className="flex-center">
+                            <Button className='hamburgur' onClick={toggleLeftSidebar} sx={{ mt: -1.3 }}>
+                                {isShowLeftSideBar ?
+                                    <Image src={HamburgurLift} alt={"HamburgurRight"} /> :
+                                    <Image src={HamburgurRight} alt={"HamburgurRight"} />
+                                }
+                            </Button>
+                            <Logo />
+                        </Box>
+                    </Box>
+
+                    <CustomSwitch />
                 </Box>
-                <Box></Box>
+                <Box className="flex-center" gap={1.5}>
+                    <button className='btn btn-primary'>login</button>
+                    <button className='btn btn-secondary'>Signup</button>
+                    <Box pr={2.75} pl={2.25}>
+                        <Image src={MessageIcon} alt={"MessageIcon"} />
+                    </Box>
+                </Box>
             </Stack>
 
         </>
