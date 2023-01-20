@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 export default function SimpleSlider() {
     var settings = {
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 4,
