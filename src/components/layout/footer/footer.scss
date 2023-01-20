@@ -1,0 +1,92 @@
+.footer_main {
+    background-color: $color_background-footer;
+    padding-top: 40px;
+    margin-top: auto;
+    z-index: 3;
+    padding-left:16px;
+    padding-right: 16px;
+    .footer_container {
+        max-width: 1024px;
+        margin: 0 auto;
+
+        .footer_colum_content_wrapper {
+            .footer_linK_label_wraper{
+                margin-bottom: 15px;
+                p {
+              
+                    color: $color_grey-20;
+                    text-transform: uppercase;
+                    margin-top: 0;
+                   
+                    line-height: 16px;
+                    display: block;
+                    font-size: 11px;
+                }
+
+            }
+           
+            .footer_link{
+                color: $color_grey-40;
+                text-decoration: none;
+                transition: color .3s;
+                font-size: 11px;
+                line-height: 2.2;
+                cursor: pointer;
+                &:hover{
+                    color: $color_grey-20;
+                }
+
+            }
+            .footer_logo_text_wrapper{
+                p{
+                    margin: 0;
+                    font-size: 9px;
+                    color: $color_grey-40;
+                    align-self: center;
+                }
+
+            }
+            .footer_logo_wrapper{
+                margin-bottom: 15px;
+                .imag_wraper{
+                    position: relative;
+                    width: 150px;
+                    height: 50px;
+                    &:hover{
+                        transform: translateY(-7px);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                .imag_wraper1{
+                    position: relative;
+                    width: 48px;
+                    height: 22px;
+                    &:hover{
+                        transform: translateY(-7px);
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                }
+                i{
+                    width: 36px;
+                    height: 36px;
+                    border: 2px solid $color_white;
+                    color:$color_white;
+                    border-radius: 50%;
+                    line-height: 32px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width:601px) and (max-width:900px) {
+        padding-left:16px;
+        padding-right: 16px;
+
+    }
+    @media screen and (max-width:600px) {
+        padding-left:16px;
+        padding-right: 16px;
+
+    }
+}
