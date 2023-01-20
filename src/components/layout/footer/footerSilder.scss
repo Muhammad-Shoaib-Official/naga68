@@ -1,9 +1,22 @@
-.silder_mainn{
+.silder_mainn {
     margin-bottom: 20px;
-    .main_logo_wraper{
-        position: relative;
-        max-width: 200px !important;
-        width: 100%;
-        height: 75px;
+
+    .main_logo_wraper {
+
+        .link {
+            position: relative;
+            max-width: 200px !important;
+            width: 100%;
+            height: 75px;
+
+            .apply_grayScal {
+                filter: grayscale(100%);
+                &:hover {
+                    filter: unset;
+                }
+            }
+
+        }
+
     }
 }

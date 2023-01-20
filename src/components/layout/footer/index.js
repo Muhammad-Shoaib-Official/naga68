@@ -1,15 +1,11 @@
 import { Divider, Grid } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
-// import steemit from "../../../../public/assets/footerimges/socialicon/steemit.svg";
-import SimpleSlider from "./footerSilder";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import TelegramIcon from '@mui/icons-material/Telegram';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import teligram from "../../../../public/assets/footerimges/socialicon/teligram.svg";
+import FooterSlider from "./footerSilder";
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
@@ -169,17 +165,79 @@ const Footer = () => {
       target: "_blank",
     },
   ];
+  const socialIcon = [
+    {
+      id: 1,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/teligram.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 2,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/twitter.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 3,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/instagram.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 4,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/youtube.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 5,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/setmeet.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 6,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/bitcointalk.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 7,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/tikto.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 8,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/pentirest.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 9,
+      linkPath: "#",
+      imgPath: "/assets/footerimges/socialicon/discord.svg",
+      alttext: "icon Img",
+    },
+    {
+      id: 10,
+      linkPath: "#",
+      imgPath: '/assets/footerimges/socialicon/reddit.svg',
+      alttext: "icon Img",
+    },
+  ];
   return (
-    <div className="footer_main">
+    <footer className="footer_main">
       {/* <h2>Width: {windowWidth}</h2> */}
       <div className="footer_container">
         <Grid container spacing={2} style={{ marginBottom: "40px" }}>
           <Grid item xs={12} sm={2} md={1.5}>
             <div className="footer_colum_content_wrapper">
               <div className="footer_linK_label_wraper flex-between ">
-                <p>I-gaming</p>
+                <div className="main_top_heading">I-gaming</div>
                 {windowWidth <= "599" && (
-                  <p onClick={handleMobilClick}>click</p>
+                  <div onClick={handleMobilClick}>click</div>
                 )}
               </div>
               {windowWidth >= "600" && (
@@ -322,49 +380,25 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Divider className="divider" />
-        <SimpleSlider />
+        <FooterSlider />
         <Divider className="divider" />
         <div className="social_media_wraper">
           <div className="social_icon_wrapper_inner">
-            <Link href="#" className="_icon_styled_div flex-center">
-              <TelegramIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <TwitterIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <InstagramIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <YouTubeIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image  src="/assets/footerimges/socialicon/setmeet.svg" alt="Picture of the author" width={22} height={22}/>
-              {/* <YouTubeIcon sx={{ color: "#fff" }} /> */}
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/bitcointalk.svg" alt="Picture of the author" width={22} height={22}/>
-            
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/tikto.svg" alt="Picture of the author" width={22} height={22}/>
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/pentirest.svg" alt="Picture of the author" width={22} height={22}/>
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/discord.svg" alt="Picture of the author" width={22} height={22}/>
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/reddit.svg" alt="Picture of the author" width={22} height={22}/>
-            </Link>
-            
-            
+            {socialIcon.map((icon) => (
+              <Link key={icon.id} href={icon.linkPath} className="_icon_styled_div flex-center">
+                <Image src={icon.imgPath} alt={icon.alttext} width={22} height={22} />
+              </Link>
+            ))}
           </div>
         </div>
         <Divider className="divider" />
+        <div className="copy_write_main">
+          <p className="Copywrite_text">Copyright © 2023 NAGA. All rights reserved.</p>
+          
+
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
