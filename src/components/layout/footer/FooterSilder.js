@@ -1,69 +1,75 @@
-
+import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
+import img from "../../../../public/assets/footerimges/sliderimges/01.png";
 
 export default function SimpleSlider() {
-    var settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        infinite:true,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      };
-    return (
+  var settings = {
+    dots: false,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    // infinite: true,
+    // autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className="silder_mainn">
       <Slider {...settings}>
-         <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
+        <div className="main_logo_wraper">
+          <Image src={img} alt="Picture of the author" fill />
+        </div>
       </Slider>
-    );
-  }
+    </div>
+  );
+}

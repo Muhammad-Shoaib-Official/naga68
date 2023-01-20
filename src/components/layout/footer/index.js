@@ -1,10 +1,15 @@
-import { Grid } from "@mui/material";
+import { Divider, Grid } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
+// import steemit from "../../../../public/assets/footerimges/socialicon/steemit.svg";
 import SimpleSlider from "./footerSilder";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
@@ -168,7 +173,7 @@ const Footer = () => {
     <div className="footer_main">
       {/* <h2>Width: {windowWidth}</h2> */}
       <div className="footer_container">
-        <Grid container spacing={2}>
+        <Grid container spacing={2} style={{ marginBottom: "40px" }}>
           <Grid item xs={12} sm={2} md={1.5}>
             <div className="footer_colum_content_wrapper">
               <div className="footer_linK_label_wraper flex-between ">
@@ -316,7 +321,48 @@ const Footer = () => {
             </div>
           </Grid>
         </Grid>
-        <SimpleSlider/>
+        <Divider className="divider" />
+        <SimpleSlider />
+        <Divider className="divider" />
+        <div className="social_media_wraper">
+          <div className="social_icon_wrapper_inner">
+            <Link href="#" className="_icon_styled_div flex-center">
+              <TelegramIcon sx={{ color: "#fff" }} />
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+              <TwitterIcon sx={{ color: "#fff" }} />
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+              <InstagramIcon sx={{ color: "#fff" }} />
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+              <YouTubeIcon sx={{ color: "#fff" }} />
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+              <Image  src="/assets/footerimges/socialicon/setmeet.svg" alt="Picture of the author" width={22} height={22}/>
+              {/* <YouTubeIcon sx={{ color: "#fff" }} /> */}
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+            <Image  src="/assets/footerimges/socialicon/bitcointalk.svg" alt="Picture of the author" width={22} height={22}/>
+            
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+            <Image  src="/assets/footerimges/socialicon/tikto.svg" alt="Picture of the author" width={22} height={22}/>
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+            <Image  src="/assets/footerimges/socialicon/pentirest.svg" alt="Picture of the author" width={22} height={22}/>
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+            <Image  src="/assets/footerimges/socialicon/discord.svg" alt="Picture of the author" width={22} height={22}/>
+            </Link>
+            <Link href="#" className="_icon_styled_div flex-center">
+            <Image  src="/assets/footerimges/socialicon/reddit.svg" alt="Picture of the author" width={22} height={22}/>
+            </Link>
+            
+            
+          </div>
+        </div>
+        <Divider className="divider" />
       </div>
     </div>
   );
