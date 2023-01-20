@@ -11,11 +11,11 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
-      <div style={{padding:"10px"}}>
+      <div style={{ padding: "10px" }}>
         <button className='btn btn-primary'>login</button>
         <button className='btn btn-secondary'>Signup</button>
         <button className='btn btn-secondary btn-lg_primary'>Signup</button>
-        </div>
+      </div>
     </>
   )
 }
