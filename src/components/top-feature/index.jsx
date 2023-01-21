@@ -6,50 +6,50 @@ import { box, cash_back, crypto_boxes, mining, naga_charges, rack_backImg, win_r
 const TopFeatures = () => {
     return (
         <Box className="top-features">
-            <Grid className='grid' container>
-                <Grid item className='grid_cell win_real flex-between' >
+            <Box className='top-features_grid'>
+                <Box item className='grid_cell win_real flex-between' sx={{ backgroundImage: `url(${win_real.src})` }} >
                     <h4>Win Real Crypto by Free Play</h4>
-                    <div className='win-real-img'>
+                    {/* <Box className='win-real-img'>
                         <Image src={win_real} alt="" />
-                    </div>
-                </Grid>
-                <Grid item className='grid_cell free_crypto flex-between' >
-                    <h4>Free Crypto Boxes</h4>
-                    <div className='free-crypto-img'>
+                    </Box> */}
+                </Box>
+                <Box item className='grid_cell free_crypto flex-between' >
+                    {/* <h4>Free Crypto Boxes</h4> */}2
+                    {/* <Box className='free-crypto-img'>
                         <Image src={win_real} alt="" />
-                    </div>
-                </Grid>
-                <Grid item className='grid_cell naga_charges flex-between'  >
-                    <h4>Fury Charge</h4>
-                    <div className='naga-charges-img '>
+                    </Box> */}
+                </Box>
+                <Box item className='grid_cell naga_charges flex-between'  >
+                    {/* <h4>Fury Charge</h4> */}3
+                    {/* <Box className='naga-charges-img '>
                         <Image src={naga_charges} alt="" />
-                    </div>
-                </Grid>
-                <Grid item className='grid_cell welcome_bonus flex-between'  >
-                    <h4>Cashback up to 25%</h4>
-                    <div className='welcome-bonus-img '>
+                    </Box> */}
+                </Box>
+                <Box item className='grid_cell welcome_bonus flex-between'  >
+                    {/* <h4>Cashback up to 25%</h4> */}4
+                    {/* <Box className='welcome-bonus-img '>
                         <Image src={cash_back} alt="" />
-                    </div>
-                </Grid>
-                <Grid item className='grid_cell cash_back flex-between'>
-                    <h4>Free Crypto Boxes</h4>
-                    <div className='welcome-bonus-img '>
+                    </Box> */}
+                </Box>
+                <Box item className='grid_cell cash_back flex-between'>
+                    {/* <h4>Free Crypto Boxes</h4> */}5
+                    {/* <Box className='welcome-bonus-img '>
                         <Image src={cash_back} alt="" />
-                    </div>
-                </Grid>
-                <Grid item className='grid_cell rack_back flex-between'>
-                    <h4>Rakeback</h4>
-                    <div className='rack-back-img '>
+                    </Box> */}
+                </Box>
+                <Box item className='grid_cell rack_back flex-between'>
+                    {/* <h4>Rakeback</h4> */}6
+                    {/* <Box className='rack-back-img '>
                         <Image src={rack_backImg} alt="" />
-                    </div>
-                </Grid>
-                <Grid item className='grid_cell mining flex-between' >
-                    <h4>Mining & Staking up to 100% APY</h4>
-                    <div className='mining-img '>
+                    </Box> */}
+                </Box>
+                <Box item className='grid_cell mining flex-between' >
+                    {/* <h4>Mining & Staking up to 100% APY</h4> */}7
+                    {/* <Box className='mining-img '>
                         <Image src={mining} alt="" />
-                    </div>
-                </Grid>
-            </Grid>
+                    </Box> */}
+                </Box>
+            </Box>
         </Box>
     )
 }
