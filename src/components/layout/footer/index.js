@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
 // import steemit from "../../../../public/assets/footerimges/socialicon/steemit.svg";
-import SimpleSlider from "./footerSilder";
+// import SimpleSlider from "./footerSilder";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -322,7 +322,7 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Divider className="divider" />
-        <SimpleSlider />
+        {/* <SimpleSlider /> */}
         <Divider className="divider" />
         <div className="social_media_wraper">
           <div className="social_icon_wrapper_inner">
@@ -339,27 +339,27 @@ const Footer = () => {
               <YouTubeIcon sx={{ color: "#fff" }} />
             </Link>
             <Link href="#" className="_icon_styled_div flex-center">
-              <Image  src="/assets/footerimges/socialicon/setmeet.svg" alt="Picture of the author" width={22} height={22}/>
+              <Image src="/assets/footerimges/socialicon/setmeet.svg" alt="Picture of the author" width={22} height={22} />
               {/* <YouTubeIcon sx={{ color: "#fff" }} /> */}
             </Link>
             <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/bitcointalk.svg" alt="Picture of the author" width={22} height={22}/>
-            
+              <Image src="/assets/footerimges/socialicon/bitcointalk.svg" alt="Picture of the author" width={22} height={22} />
+
             </Link>
             <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/tikto.svg" alt="Picture of the author" width={22} height={22}/>
+              <Image src="/assets/footerimges/socialicon/tikto.svg" alt="Picture of the author" width={22} height={22} />
             </Link>
             <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/pentirest.svg" alt="Picture of the author" width={22} height={22}/>
+              <Image src="/assets/footerimges/socialicon/pentirest.svg" alt="Picture of the author" width={22} height={22} />
             </Link>
             <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/discord.svg" alt="Picture of the author" width={22} height={22}/>
+              <Image src="/assets/footerimges/socialicon/discord.svg" alt="Picture of the author" width={22} height={22} />
             </Link>
             <Link href="#" className="_icon_styled_div flex-center">
-            <Image  src="/assets/footerimges/socialicon/reddit.svg" alt="Picture of the author" width={22} height={22}/>
+              <Image src="/assets/footerimges/socialicon/reddit.svg" alt="Picture of the author" width={22} height={22} />
             </Link>
-            
-            
+
+
           </div>
         </div>
         <Divider className="divider" />
