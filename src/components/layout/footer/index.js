@@ -1,15 +1,14 @@
-import { Divider, Grid } from "@mui/material";
+import { Divider, Grid, Tooltip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
-// import steemit from "../../../../public/assets/footerimges/socialicon/steemit.svg";
-// import SimpleSlider from "./footerSilder";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import TelegramIcon from '@mui/icons-material/Telegram';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import { gammingLinks, FeatueLinks, promoLinks, aboutusLinks, helpLinks, socialIcon } from "./FooterMockData"
+
+import FooterSlider from "./footerSilder";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
@@ -27,159 +26,17 @@ const Footer = () => {
   const handleMobilClick = () => {
     alert("heloo");
   };
-  const gammingLinks = [
-    {
-      id: 1,
-      name: "All games",
-      linkPath: "/all-games",
-      target: "",
-    },
-    {
-      id: 2,
-      name: "Dice",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 3,
-      name: "Slots",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 4,
-      name: "Rank system",
-      linkPath: "#",
-      target: "_blank",
-    },
-  ];
-  const FeatueLinks = [
-    {
-      id: 1,
-      name: " Staking",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 2,
-      name: " BetFury Box",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 3,
-      name: "Cashback",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 4,
-      name: "  Daily tasks",
-      linkPath: "#",
-      target: "_blank",
-    },
-  ];
-  const promoLinks = [
-    {
-      id: 1,
-      name: "Promotions",
-      linkPath: "#",
-      target: "",
-    },
-  ];
-  const aboutusLinks = [
-    {
-      id: 1,
-      name: "News",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 2,
-      name: " About BFG",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 3,
-      name: " About BetFury team",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 4,
-      name: " BetFury Whitepaper",
-      linkPath: "#",
-      target: "_blank",
-    },
-    {
-      id: 5,
-      name: "  BetFury Docs",
-      linkPath: "#",
-      target: "_blank",
-    },
-    {
-      id: 6,
-      name: "Official Mirrors",
-      linkPath: "#",
-      target: "_blank",
-    },
-  ];
-  const helpLinks = [
-    {
-      id: 1,
-      name: "Fairness",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 2,
-      name: " Privacy Policy",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 3,
-      name: "  Terms of Service",
-      linkPath: "#",
-      target: "",
-    },
-    {
-      id: 4,
-      name: "Sportsbetting T&C",
-      linkPath: "#",
-      target: "_blank",
-    },
-    {
-      id: 5,
-      name: " Bug Bounty Program",
-      linkPath: "#",
-      target: "_blank",
-    },
-    {
-      id: 6,
-      name: "  Live Support",
-      linkPath: "#",
-      target: "_blank",
-    },
-    {
-      id: 7,
-      name: " Responsible Gambling",
-      linkPath: "#",
-      target: "_blank",
-    },
-  ];
   return (
-    <div className="footer_main">
+    <footer className="footer_main">
       {/* <h2>Width: {windowWidth}</h2> */}
       <div className="footer_container">
         <Grid container spacing={2} style={{ marginBottom: "40px" }}>
           <Grid item xs={12} sm={2} md={1.5}>
             <div className="footer_colum_content_wrapper">
               <div className="footer_linK_label_wraper flex-between ">
-                <p>I-gaming</p>
+                <div className="main_top_heading">I-gaming</div>
                 {windowWidth <= "599" && (
-                  <p onClick={handleMobilClick}>click</p>
+                  <div onClick={handleMobilClick}>click</div>
                 )}
               </div>
               {windowWidth >= "600" && (
@@ -322,49 +179,59 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Divider className="divider" />
-        {/* <SimpleSlider /> */}
+        <FooterSlider />
         <Divider className="divider" />
-        <div className="social_media_wraper">
+        <div className="social_media_wraper flex-between ">
           <div className="social_icon_wrapper_inner">
-            <Link href="#" className="_icon_styled_div flex-center">
-              <TelegramIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <TwitterIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <InstagramIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <YouTubeIcon sx={{ color: "#fff" }} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image src="/assets/footerimges/socialicon/setmeet.svg" alt="Picture of the author" width={22} height={22} />
-              {/* <YouTubeIcon sx={{ color: "#fff" }} /> */}
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image src="/assets/footerimges/socialicon/bitcointalk.svg" alt="Picture of the author" width={22} height={22} />
+            {socialIcon.map((icon) => (
+              <Tooltip PopperProps={{
+                sx: {
+                  "& .MuiTooltip-tooltip": {
+                    borderRadius: "50Px",
+                    color: "#55657e",
+                    backgroundColor: "#202a39",
+                  }
+                }
+              }} key={icon.id} title={icon.tooltip} placement="top">
+                <Link href={icon.linkPath} className="_icon_styled_div flex-center">
+                  <Image src={icon.imgPath} alt={icon.alttext} width={22} height={22} />
+                </Link>
+              </Tooltip>
 
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image src="/assets/footerimges/socialicon/tikto.svg" alt="Picture of the author" width={22} height={22} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image src="/assets/footerimges/socialicon/pentirest.svg" alt="Picture of the author" width={22} height={22} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image src="/assets/footerimges/socialicon/discord.svg" alt="Picture of the author" width={22} height={22} />
-            </Link>
-            <Link href="#" className="_icon_styled_div flex-center">
-              <Image src="/assets/footerimges/socialicon/reddit.svg" alt="Picture of the author" width={22} height={22} />
-            </Link>
-
-
+            ))}
+          </div>
+          <div className="coin_detail_wrapper">
+            <div className="first_one">
+              <div className="coin_logo_wraper">
+                <Image src="/assets/footerimges/bfg.svg" alt="logo" className="img" width={20} height={20} />
+                <span className="fw-600" >BFG</span>
+              </div>
+              <ArrowRightAltIcon sx={{ color: "#fff", fontSize: "16px", margin: "0 5px" }} />
+              <div className="coin_logo_wraper">
+                <Image src="/assets/footerimges/dog.svg" alt="logo" className="img" width={20} height={20} />
+                <span className="fw-600" >Metamask</span>
+              </div>
+            </div>
+            <div className="first_one">
+              <div className="coin_logo_wraper">
+                <Image src="assets/footerimges/btccoin.svg" alt="logo" className="img" width={20} height={20} />
+                <span className="fw-600" >1 BTC = <span>$22724.3200</span></span>
+              </div>
+            </div>
           </div>
         </div>
         <Divider className="divider" />
+        <div className="copy_write_main flex-between">
+          <p className="Copywrite_text">Copyright © 2023 NAGA. All rights reserved.</p>
+          <div className="first_one">
+            <div className="coin_logo_wraper">
+              <Image src="assets/footerimges/btccoin.svg" alt="logo" className="img" width={20} height={20} />
+              <span className="fw-600" >1 BTC = <span>$22724.3200</span></span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
