@@ -6,15 +6,14 @@
     position: relative;
     z-index: 3;
     min-height: 228px;
+    box-sizing: border-box !important;
 
-    .grid {
+    .top-features_grid {
         display: grid;
-        // grid-template-columns: repeat(6, 1fr);
-        // grid-template-rows: repeat(2, 98px);
         grid-gap: 12px;
         gap: 12px;
         border-radius: 12px;
-        // overflow: hidden;
+        overflow: hidden;
         grid-template-areas:
             "win_real win_real welcom_bonus welcom_bonus naga_charges free_crypto"
             "cash_back rack_back welcom_bonus welcom_bonus mining mining";
@@ -39,53 +38,52 @@
         .grid_cell {
             background-color: $color_grey-80;
             border-radius: 5px;
-            padding: 0;
-            width: 100%;
-            transition: background-color .1s ease-in-out;
+            // padding: 0;
+            // width: 100%;
+            // transition: background-color .1s ease-in-out;
+            // flex: 1;
+            // background-color: red;
+            // max-width: 180px;
+            box-sizing: border-box;
+            background-position: right;
+            background-repeat: no-repeat;
 
             h4 {
                 font-size: 16px;
                 color: #fff;
                 z-index: 1;
                 padding: 33px 0 33px 15px;
+                max-width: 120px;
             }
         }
 
         .win_real {
             grid-area: win_real;
-            background-color: $color_grey-80;
         }
 
         .welcom_bonus {
             grid-area: welcom_bonus;
-            background-color: $color_grey-80;
-            background-image: url('');
         }
 
         .naga_charges {
             grid-area: naga_charges;
-            background-color: $color_grey-80;
         }
 
         .free_crypto {
             grid-area: welcom_bonus;
-            background-color: $color_grey-80;
         }
 
         .cash_back {
             grid-area: free_crypto;
-            background-color: $color_grey-80;
 
         }
 
         .rack_back {
             grid-area: rack_back;
-            background-color: $color_grey-80;
         }
 
         .mining {
             grid-area: mining;
-            background-color: $color_grey-80;
         }
 
     }

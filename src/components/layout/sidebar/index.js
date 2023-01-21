@@ -6,7 +6,7 @@ import { routes } from '../../../constants/sidebar';
 
 const Sidebar = () => {
     return (
-        <Box sx={{ minWidth: 240, maxWidth: 240, background: "#111923", position: "relative" }} className="side--main">
+        <Box sx={{ minWidth: 240, pt: "75px", maxWidth: 240, background: "#111923", position: "relative" }} className="side--main">
             {/* <Drawer
                 className={`mainDrawer hideDrawer`}
                 sx={{ top: "65px !important", background: "red !important" }}
@@ -141,7 +141,7 @@ const Sidebar = () => {
                                                     height={24}
                                                 />
                                             </ListItemIcon>
-                                            <ListItemText marginLeft={2} primary={item.title} />
+                                            <ListItemText color='#ffffff' sx={{ color: "white" }} marginLeft={2} primary={item.title} />
                                         </ListItemButton>
                                     </Link>
                                 )
