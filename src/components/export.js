@@ -6,3 +6,4 @@ export { default as CustomSwitch } from './switch';
 export { default as Logo } from './Logo';
 export { default as HeaderComp } from './hero';
 export { default as TopFeatures } from "./top-feature"
+export { default as Statistics } from "./statistics"

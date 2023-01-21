@@ -1,7 +1,7 @@
 import React from 'react'
 import BattleCard from '../../components/batteltornament/BattleCard'
 import HightlingthsTable from '../../components/batteltornament/HightlingthsTable'
-import { HeaderComp, TopFeatures } from '../../components/export'
+import { HeaderComp, TopFeatures, Statistics } from '../../components/export'
 const HomeModule = () => {
     return (
         <>
@@ -9,6 +9,7 @@ const HomeModule = () => {
             <TopFeatures />
             <BattleCard/>
             <HightlingthsTable/>
+            <Statistics />
         </>
     )
 }

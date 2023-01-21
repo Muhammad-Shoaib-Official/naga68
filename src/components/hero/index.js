@@ -14,7 +14,7 @@ const HeaderComp = () => {
                             <p>Enjoy 5000+ crypto games, fast payouts and 24/7 live support. Make the best of the superior Bitcoin Casino.</p>
                         </div>
                         <Box className="hero-signup-btn" display="flex" alignItems="center" >
-                            <button className='btn btn-secondary btn-lg_primary'>Signup</button>
+                            <button className='btn btn-secondary btn-lg_primary'>Sign up</button>
                             <Box className="hero-signup-btn-text flex-center" width="100%" sx={{ background: "#fff", flexDirection: "row", maxWidth: "210px", }} borderRadius="0 22px 22px 0" marginLeft="-2px" paddingLeft="9px" paddingY="2px" paddingRight="2px">
                                 <p>
                                     Get <b>300</b> Free Spins +

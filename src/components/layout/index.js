@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material'
+import { Container, Stack } from '@mui/material'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Sidebar, Navbar, RightSidebar, Footer } from '../export'
@@ -13,9 +13,9 @@ const Layout = ({ children }) => {
                 {isShowLeftSideBar &&
                     <Sidebar />
                 }
-                <main style={{ flex: 1, background: "transparent", maxWidth: 1040, margin: "0 auto" }}>
+                <Container maxWidth="lg">
                     {children}
-                </main>
+                </Container>
                 {
                     isShowRightSideBar &&
                     <RightSidebar />

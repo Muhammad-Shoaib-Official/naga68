@@ -20,6 +20,14 @@ body {
   padding: 0;
   margin: 0;
   font-weight: $fw-400;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
@@ -144,7 +152,9 @@ body {
     border-radius: 50px;
   }
 
-
+  .w-100 {
+    width: 100% !important;
+  }
 
   .btn {
     border-radius: $br-10;
