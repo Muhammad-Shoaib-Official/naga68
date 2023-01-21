@@ -1,6 +1,9 @@
 .navbar {
     background: $color_background-footer;
     padding-left: 12px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
 
     .logo {
         background-color: $color_grey-80;

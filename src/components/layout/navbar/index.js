@@ -33,7 +33,7 @@ const Navbar = () => {
                 </Box>
                 <Box className="flex-center" gap={1.5}>
                     <button className='btn btn-primary'>login</button>
-                    <button className='btn btn-secondary'>Signup</button>
+                    <button className='btn btn-secondary'>Sign up</button>
                     <Box pr={2.75} pl={2.25}>
                         <Image src={MessageIcon} alt={"MessageIcon"} />
                     </Box>
