@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
                 {isShowLeftSideBar &&
                     <Sidebar />
                 }
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ maxWidth: "1040px !important" }}>
                     {children}
                 </Container>
                 {
