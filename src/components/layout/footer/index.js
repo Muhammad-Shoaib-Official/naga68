@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
 // import steemit from "../../../../public/assets/footerimges/socialicon/steemit.svg";
-import SimpleSlider from "./footerSilder";
+// import SimpleSlider from "./footerSilder";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -322,7 +322,7 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Divider className="divider" />
-        <SimpleSlider />
+        {/* <SimpleSlider /> */}
         <Divider className="divider" />
         <div className="social_media_wraper">
           <div className="social_icon_wrapper_inner">
