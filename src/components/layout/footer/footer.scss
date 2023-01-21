@@ -1,3 +1,31 @@
+@mixin  first_one{
+                    
+    display: flex;
+    align-items: center;
+    height: 31px;
+    padding: 0 9px;
+    background-color:$color_grey-80;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: .8;
+    &:hover{
+        opacity: 1;
+    }
+    .coin_logo_wraper{
+        display: flex;
+        align-items: center;
+        .img{
+            margin-right: 4px;
+        }
+        span{
+            color: $color_white;
+            font-size: 10px;
+        }
+    }
+    &:nth-child(1){
+        margin-right: 10px;
+    }
+}
 .footer_main {
     background-color: $color_background-footer;
     padding: 40px 16px;
@@ -87,73 +115,87 @@
             }
         }
 
+        
+        .social_media_wraper {
+            flex-wrap: wrap;
+            .social_icon_wrapper_inner {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                ._icon_styled_div {
+                    cursor: pointer;
+                    background: $bg_gradiant_blue;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 8px;
+                    margin: 0 4px;
+                    transition: all .3s;
+                    &:hover {
+                        transform: scale(1.15);
+                    }
+                    &:nth-child(3) {
+                        background: $bg_gradiant_inta;
+                    }
+                    &:nth-child(4) {
+                        background: $bg_youtob_Gradiant;
+                    }
+                    &:nth-child(5) {
+                        background: $bg_steemit_gradiant;
+                    }
+                    &:nth-child(6) {
+                        background: $bg_bitcoin_talk;
+                    }
+                    &:nth-child(7) {
+                        background: $bg_tiktok_rgadiant;
+                    }
+                    &:nth-child(8) {
+                        background: $bg_youtob_Gradiant;
+                    }
+                    &:nth-child(9) {
+                        background: $bg_discord_gradiant;
+                    }
+                    &:nth-child(10) {
+                        background: $bg_reddit_gradiant;
+                    }
+                }
+            }
+            .coin_detail_wrapper{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+               
+                // @extend .first_one;
+                .first_one{
+                    @include first_one;
+                }
+            }
+        }
         .copy_write_main {
+           
+            flex-wrap: wrap;
             .Copywrite_text {
                 font-size: 9px;
                 color: $color_grey-40;
             }
+            .first_one{
+                @include first_one;
+                display: none;
+                @media screen and (max-width:600px){
+                    display: block;
+                }
+                
+
+            }
+           
+
         }
     }
-
     .divider {
         border: 1px solid $colo_divider;
         margin: 20px 0;
     }
 
-    .social_media_wraper {
-        color: green;
-
-        .social_icon_wrapper_inner {
-            display: flex;
-            align-items: center;
-
-            ._icon_styled_div {
-                cursor: pointer;
-                background: $bg_gradiant_blue;
-                width: 32px;
-                height: 32px;
-                border-radius: 8px;
-                margin: 0 4px;
-                transition: all .3s;
-
-                &:hover {
-                    transform: scale(1.15);
-                }
-
-                &:nth-child(3) {
-                    background: $bg_gradiant_inta;
-                }
-
-                &:nth-child(4) {
-                    background: $bg_youtob_Gradiant;
-                }
-
-                &:nth-child(5) {
-                    background: $bg_steemit_gradiant;
-                }
-
-                &:nth-child(6) {
-                    background: $bg_bitcoin_talk;
-                }
-
-                &:nth-child(7) {
-                    background: $bg_tiktok_rgadiant;
-                }
-
-                &:nth-child(8) {
-                    background: $bg_youtob_Gradiant;
-                }
-
-                &:nth-child(9) {
-                    background: $bg_discord_gradiant;
-                }
-
-                &:nth-child(10) {
-                    background: $bg_reddit_gradiant;
-                }
-            }
-        }
-    }
+    
 
     @media screen and (min-width:601px) and (max-width:900px) {
         padding-left: 16px;

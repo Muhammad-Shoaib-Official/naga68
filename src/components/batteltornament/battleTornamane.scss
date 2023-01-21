@@ -1,0 +1,172 @@
+.battelAndTornament_section {
+    margin-bottom: 30px;
+
+    .nameColum {
+        display: flex;
+        align-items: center;
+
+        .img {
+            margin-right: 6px;
+        }
+
+        .name {
+            color: $color_grey-20;
+            font-size: 12px;
+        }
+    }
+
+    .player_colum {
+        .baged_img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+
+            .img_circle {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .betamoutn_colum {
+        display: flex;
+        align-items: center;
+
+        .bet_icon_image {
+            width: 22px;
+            height: 22px;
+            position: relative;
+            margin-right: 6px;
+
+            .img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .win_amount {
+        color: $color_green;
+        background-color: rgba(27, 184, 61, .15);
+        padding: 2px 8px;
+        border-radius: 8px;
+    }
+
+    .lose_amount {
+        color: $color_grey-40;
+        background-color: rgba(85, 101, 126, .15);
+        padding: 2px 8px;
+        border-radius: 8px;
+    }
+}
+
+.battelCard {
+    margin: 50px 0;
+    .card {
+        border-radius: 10px;
+        background-color: $color_grey-100;
+
+        .card_banner_img_wrapper {
+            background-image: url("../../../public/assets/battelTornament/cardimg/card1.png");
+            padding: 20px;
+            background-repeat: no-repeat;
+            background-size: 101% 100%;
+            border-radius: 10px;
+
+
+            h4 {
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: -.02em;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                max-height: 52px;
+                max-width: 160px;
+                margin: 0 0 20px;
+                flex-shrink: 0;
+                color: $color_white;
+            }
+
+            .card_counter {
+                padding: 9px 15px;
+                width: 160px;
+                // height: 51px;
+                background: hsla(0, 0%, 100%, .18);
+                border: 1px solid hsla(0, 0%, 100%, .1);
+                border-radius: 8px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .couter_tag {
+                    position: absolute;
+                    left: -1px;
+                    top: -2px;
+                    transform: translateY(-50%);
+                    font-weight: 800;
+                    font-size: 9px;
+                    line-height: 120%;
+                    letter-spacing: .04em;
+                    text-transform: uppercase;
+                    color: #0d131c;
+                    color: var(--color_background-100);
+                    opacity: .9;
+                    background: #fed700;
+                    border-radius: 8px 8px 8px 0;
+                    padding: 2px 6px;
+                    white-space: nowrap;
+                }
+            }
+
+            ._prize {
+                margin-top: 10px;
+                display: inline-flex;
+                align-items: center;
+                padding: 0 10px;
+                background: $color_yellow_2;
+                box-shadow: 0 6.88237px 13.1093px -6.88237px rgb(0 0 0 / 8%);
+                border-radius: 8px;
+                font-weight: 800;
+                color: #0d131c;
+                // color: $color_grey-100;
+                height: 36px;
+
+                .pool {
+                    font-size: 9px;
+                    line-height: 120%;
+                    letter-spacing: .04em;
+                    opacity: .9;
+                    width: 32px;
+                    margin-right: 6px;
+                }
+
+                .prize {
+                    font-size: 24px;
+                    line-height: 110%;
+                    letter-spacing: -.02em;
+                    font-weight: 800;
+
+                }
+            }
+
+        }
+
+        .card_content {
+            background-color: $color_grey-100;
+            padding: 12px 12px 0;
+            border-radius: 0 0 10px 10px;
+
+            .view_battel {
+                background-color: $color_grey-70;
+                // color: #2283f6;
+                // display: flex;
+                font-weight: 600;
+                // align-items: center;
+                text-decoration: none;
+                padding: 0;
+            }
+
+        }
+    }
+}

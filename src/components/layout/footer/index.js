@@ -1,12 +1,14 @@
-import { Divider, Grid } from "@mui/material";
+import { Divider, Grid, Tooltip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
-import {gammingLinks,FeatueLinks,promoLinks,aboutusLinks,helpLinks,socialIcon} from "./FooterMockData"
-// import teligram from "../../../../public/assets/footerimges/socialicon/teligram.svg";
+import { gammingLinks, FeatueLinks, promoLinks, aboutusLinks, helpLinks, socialIcon } from "./FooterMockData"
+
 import FooterSlider from "./footerSilder";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+
 const Footer = () => {
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" && window.innerWidth
@@ -179,23 +181,54 @@ const Footer = () => {
         <Divider className="divider" />
         <FooterSlider />
         <Divider className="divider" />
-        <div className="social_media_wraper">
+        <div className="social_media_wraper flex-between ">
           <div className="social_icon_wrapper_inner">
             {socialIcon.map((icon) => (
-              <Link key={icon.id} href={icon.linkPath} className="_icon_styled_div flex-center">
-                <Image src={icon.imgPath} alt={icon.alttext} width={22} height={22} />
-              </Link>
+              <Tooltip PopperProps={{
+                sx: {
+                  "& .MuiTooltip-tooltip": {
+                    borderRadius: "50Px",
+                    color: "#55657e",
+                    backgroundColor: "#202a39",
+                  }
+                }
+              }} key={icon.id} title={icon.tooltip} placement="top">
+                <Link  href={icon.linkPath} className="_icon_styled_div flex-center">
+                  <Image src={icon.imgPath} alt={icon.alttext} width={22} height={22} />
+                </Link>
+              </Tooltip>
+
             ))}
           </div>
           <div className="coin_detail_wrapper">
             <div className="first_one">
-              heloo
+              <div className="coin_logo_wraper">
+                <Image src="assets/footerimges/bfg.svg" className="img" width={20} height={20} />
+                <span className="fw-600" >BFG</span>
+              </div>
+              <ArrowRightAltIcon sx={{ color: "#fff", fontSize: "16px", margin: "0 5px" }} />
+              <div className="coin_logo_wraper">
+                <Image src="assets/footerimges/dog.svg" className="img" width={20} height={20} />
+                <span className="fw-600" >Metamask</span>
+              </div>
+            </div>
+            <div className="first_one">
+              <div className="coin_logo_wraper">
+                <Image src="assets/footerimges/btccoin.svg" className="img" width={20} height={20} />
+                <span className="fw-600" >1 BTC = <span>$22724.3200</span></span>
+              </div>
             </div>
           </div>
         </div>
         <Divider className="divider" />
-        <div className="copy_write_main">
+        <div className="copy_write_main flex-between">
           <p className="Copywrite_text">Copyright © 2023 NAGA. All rights reserved.</p>
+          <div className="first_one">
+            <div className="coin_logo_wraper">
+              <Image src="assets/footerimges/btccoin.svg" className="img" width={20} height={20} />
+              <span className="fw-600" >1 BTC = <span>$22724.3200</span></span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
