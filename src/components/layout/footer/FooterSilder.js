@@ -10,8 +10,9 @@ export default function SimpleSlider() {
     slidesToShow: 7,
     slidesToScroll: 1,
     initialSlide: 0,
-    // infinite: true,
-    // autoplay: true,
+    infinite: true,
+    autoplay: true,
+    arrow: false,
     responsive: [
       {
         breakpoint: 1024,
