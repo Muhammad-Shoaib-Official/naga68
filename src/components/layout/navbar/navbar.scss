@@ -1,0 +1,37 @@
+.navbar {
+    background: $color_background-footer;
+    padding-left: 12px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+
+    .logo {
+        background-color: $color_grey-80;
+        border-radius: 10px;
+        transform: skewY(-3deg) skewX(-17deg);
+        padding: 36px 25px 16px 66px;
+        margin: -30px 0 -20px -65px;
+        overflow: hidden;
+
+        .hamburgur {
+            image {
+                &:hover {
+                    background: $color_white;
+                }
+            }
+        }
+    }
+
+    .logo_image {
+        margin-top: -12px;
+    }
+
+    .logo_text {
+        color: $color_white;
+        margin-left: -25px;
+
+        span {
+            color: $color_red;
+        }
+    }
+}

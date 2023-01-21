@@ -1,0 +1,96 @@
+// font sizes
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-15: 15px;
+$fs-16: 16px;
+$fs-17: 17px;
+$fs-18: 18px;
+$fs-19: 19px;
+$fs-20: 20px;
+$fs-22: 22px;
+$fs-24: 24px;
+$fs-26: 26px;
+$fs-28: 28px;
+$fs-30: 30px;
+$fs-32: 32px;
+$fs-34: 34px;
+$fs-36: 36px;
+$fs-38: 38px;
+$fs-40: 40px;
+
+// font weights
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+$fw-900: 900;
+
+// line heights
+$lh-20: 20px;
+$lh-22: 22px;
+$lh-24: 24px;
+$lh-28: 28px;
+$lh-30: 30px;
+$lh-32: 32px;
+$lh-34: 34px;
+$lh-36: 36px;
+$lh-38: 38px;
+$lh-40: 40px;
+$lh-46: 46px;
+
+// border radius
+$br-3: 3px;
+$br-4: 4px;
+$br-5: 5px;
+$br-7: 7px;
+$br-8: 8px;
+$br-10: 10px;
+$br-12: 12px;
+$br-14: 14px;
+$br-16: 16px;
+$br-23: 23px;
+$br-50: 50px;
+// main theme bg color
+$color_white_transparent-80: hsla(0, 0%, 100%, 0.8);
+$color_white_transparent-70: hsla(0, 0%, 100%, 0.7);
+$color_white_transparent-65: hsla(0, 0%, 100%, 0.65);
+$color_white_transparent-60: hsla(0, 0%, 100%, 0.6);
+$color_white_transparent-50: hsla(0, 0%, 100%, 0.5);
+$color_white_transparent-30: hsla(0, 0%, 100%, 0.3);
+$bg_gradiant_blue: linear-gradient(135deg, #18C8FF 0%, #0080DC 100%);
+$bg_gradiant_inta: linear-gradient(126.45deg, #7320BA 2.01%, #E03D44 50.39%, #F6CC60 94.9%), #ED1D49;
+$bg_youtob_Gradiant: linear-gradient(135deg, #ED1D49 0%, #95041E 100%);
+$bg_steemit_gradiant: linear-gradient(135deg, #00E194 0%, #00874E 100%);
+$bg_bitcoin_talk: linear-gradient(135deg, #FFAF37 0%, #F07300 100%);
+$bg_tiktok_rgadiant: linear-gradient(135deg, #00C2FF 0%, #1875FF 31.77%, #FF002E 100%);
+$bg_pinttrest_gradiant: linear-gradient(135deg, #ED1D49 0%, #95041E 100%), linear-gradient(126.45deg, #7320BA 2.01%, #E03D44 50.39%, #F6CC60 94.9%), #ED1D49;
+$bg_discord_gradiant: linear-gradient(135deg, #5662F6 0%, #3D2A8A 100%);
+$bg_reddit_gradiant: linear-gradient(135deg, #FF8A00 0%, #FF4500 100%);
+$colo_divider: rgba(85, 101, 126, .15);
+$color_background-main: #0d131c;
+$color_background-90: #111923;
+$color_background-footer: #161f2c;
+$color_grey-100: #1c2532;
+$color_grey-80: #202a39;
+$color_grey-70: #263041;
+$color_grey-60: #2a3546;
+$color_grey-50: #3c485c;
+$color_grey-40: #55657e;
+$color_grey-20: #93acd3;
+$color_white: #fff;
+$color_red: #ed1d49;
+$color_red_hover: #c31d40;
+$color_red_pressed: #ae1435;
+$color_blue: #2283f6;
+$color_blue_hover: #0b6ada;
+$color_blue_pressed: #075cc0;
+$color_yellow: #ffb636;
+$color_yellow_hover: #ffa200;
+$color_yellow_pressed: #f09000;
+$color_yellow_2: #fed700;
+$color_green: #1bb83d;
+$color_green_hover: #1ca63a;
+$color_green_pressed: #1b9636;
+$color_black: #000;

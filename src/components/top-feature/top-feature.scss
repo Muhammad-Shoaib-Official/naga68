@@ -1,0 +1,92 @@
+.top-features {
+    background: $color_background-footer;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 3;
+    min-height: 228px;
+
+    .grid {
+        display: grid;
+        // grid-template-columns: repeat(6, 1fr);
+        // grid-template-rows: repeat(2, 98px);
+        grid-gap: 12px;
+        gap: 12px;
+        border-radius: 12px;
+        overflow: hidden;
+        grid-template-areas:
+            "win_real win_real welcom_bonus welcom_bonus naga_charges free_crypto"
+            "cash_back rack_back welcom_bonus welcom_bonus mining mining";
+
+        @media screen and (min-width:601px) and (max-width:900px) {
+            grid-template-areas:
+                "welcom_bonus welcom_bonus win_real win_real  "
+                "welcom_bonus welcom_bonus naga_charges free_crypto "
+                "cash_back rack_back mining mining";
+        }
+
+        @media screen and (max-width:600px) {
+            grid-template-areas:
+                "welcom_bonus welcom_bonus"
+                "welcom_bonus welcom_bonus"
+                "cash_back rack_back"
+                "win_real win_real"
+                "naga_charges free_crypto "
+                " mining mining";
+        }
+
+        .grid_cell {
+            background-color: $color_grey-80;
+            border-radius: 5px;
+            padding: 0;
+            width: 100%;
+            transition: background-color .1s ease-in-out;
+
+            h4 {
+                font-size: 16px;
+                color: #fff;
+                z-index: 1;
+                padding: 33px 0 33px 15px;
+            }
+        }
+
+        .win_real {
+            grid-area: win_real;
+            background-color: $color_grey-80;
+        }
+
+        .welcom_bonus {
+            grid-area: welcom_bonus;
+            background-color: $color_grey-80;
+            background-image: url('');
+        }
+
+        .naga_charges {
+            grid-area: naga_charges;
+            background-color: $color_grey-80;
+        }
+
+        .free_crypto {
+            grid-area: welcom_bonus;
+            background-color: $color_grey-80;
+        }
+
+        .cash_back {
+            grid-area: free_crypto;
+            background-color: $color_grey-80;
+
+        }
+
+        .rack_back {
+            grid-area: rack_back;
+            background-color: $color_grey-80;
+        }
+
+        .mining {
+            grid-area: mining;
+            background-color: $color_grey-80;
+        }
+
+    }
+}
