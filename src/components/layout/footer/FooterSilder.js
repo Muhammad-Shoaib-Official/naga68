@@ -49,33 +49,6 @@ const SimpleSlider = () => {
               <Image className="apply_grayScal" src={data.imgpath} alt={data.altText} fill />
           </Link>
         ))}
-        {/* <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div>
-        <div className="main_logo_wraper">
-          <Image src={img} alt="Picture of the author" fill />
-        </div> */}
       </Slider>
     </div>
   );
