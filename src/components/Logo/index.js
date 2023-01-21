@@ -9,7 +9,7 @@ const Logo = () => {
         <Link href="/">
             <Box className="flex-center" ml={-4} >
                 <Image className="logo_image" src={LogoIcon} alt="LogoIcon" width={100} height={50} />
-                <h3 className="uppercase logo_text h3">naga<span>68</span></h3>
+                <h3 className="uppercase logo_text h3">naga</h3>
             </Box>
         </Link>
     )

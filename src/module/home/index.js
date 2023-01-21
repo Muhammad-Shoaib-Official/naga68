@@ -1,10 +1,11 @@
 import React from 'react'
-import { HeaderComp } from '../../components/export'
+import { HeaderComp, TopFeatures } from '../../components/export'
 const HomeModule = () => {
     return (
-        <div>
+        <>
             <HeaderComp />
-        </div>
+            <TopFeatures />
+        </>
     )
 }
 

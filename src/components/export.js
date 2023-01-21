@@ -4,4 +4,5 @@ export { default as RightSidebar } from './layout/Right-sidebar';
 export { default as Sidebar } from './layout/sidebar';
 export { default as CustomSwitch } from './switch';
 export { default as Logo } from './Logo';
-export { default as HeaderComp } from './header'; 
+export { default as HeaderComp } from './hero';
+export { default as TopFeatures } from "./top-feature"
