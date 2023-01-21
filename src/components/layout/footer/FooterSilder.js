@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
-import img from "../../../../public/assets/footerimges/sliderimges/01.png";
 import {imgPath} from "./SliderImagesmock";
 
 const SimpleSlider = () => {
