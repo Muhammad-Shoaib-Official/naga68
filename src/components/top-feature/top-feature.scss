@@ -6,11 +6,10 @@
     position: relative;
     z-index: 3;
     min-height: 228px;
+    box-sizing: border-box !important;
 
     .grid {
         display: grid;
-        // grid-template-columns: repeat(6, 1fr);
-        // grid-template-rows: repeat(2, 98px);
         grid-gap: 12px;
         gap: 12px;
         border-radius: 12px;
