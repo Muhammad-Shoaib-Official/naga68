@@ -6,7 +6,7 @@ import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
 import { gammingLinks, FeatueLinks, promoLinks, aboutusLinks, helpLinks, socialIcon } from "./FooterMockData"
 
-import FooterSlider from "./footerSilder";
+import SimpleSlider from "./footerSilder";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const Footer = () => {
@@ -179,7 +179,7 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Divider className="divider" />
-        <FooterSlider />
+        <SimpleSlider />
         <Divider className="divider" />
         <div className="social_media_wraper flex-between ">
           <div className="social_icon_wrapper_inner">
