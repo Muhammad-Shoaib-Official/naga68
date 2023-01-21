@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
 import img from "../../../../public/assets/footerimges/sliderimges/01.png";
+import {imgPath} from "./SliderImagesmock";
 
 const SimpleSlider = () => {
   var settings = {
@@ -12,7 +14,7 @@ const SimpleSlider = () => {
     initialSlide: 0,
     infinite: true,
     autoplay: true,
-    arrow: false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -43,7 +45,12 @@ const SimpleSlider = () => {
   return (
     <div className="silder_mainn">
       <Slider {...settings}>
-        <div className="main_logo_wraper">
+        {imgPath.map((data)=>(
+          <Link key={data.id} href={data.linkPath} className="_link">
+              <Image className="apply_grayScal" src={data.imgpath} alt={data.altText} fill />
+          </Link>
+        ))}
+        {/* <div className="main_logo_wraper">
           <Image src={img} alt="Picture of the author" fill />
         </div>
         <div className="main_logo_wraper">
@@ -69,7 +76,7 @@ const SimpleSlider = () => {
         </div>
         <div className="main_logo_wraper">
           <Image src={img} alt="Picture of the author" fill />
-        </div>
+        </div> */}
       </Slider>
     </div>
   );
