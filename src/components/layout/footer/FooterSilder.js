@@ -7,8 +7,9 @@ const  FooterSlider = ()=> {
     dots: false,
     speed: 500,
     slidesToShow: 7,
-    slidesToScroll: 1,
+    slidesToScroll: 7,
     initialSlide: 0,
+    arrows: false,
     infinite: true,
     autoplay: true,
     responsive: [
@@ -237,94 +238,58 @@ const  FooterSlider = ()=> {
     <div className="silder_mainn">
       <Slider {...settings}>
         {imgPath.map((imgData) => (
-          <div key={imgData.id} className="main_logo_wraper">
-            <Link href={imgData.linkPath} className="link">
-              <Image priority={true} src={imgData.imgpath} alt={imgData.altText} fill />
+            <Link key={imgData.id} href={imgData.linkPath} className="_link">
+              <Image className="apply_grayScal"  src={imgData.imgpath} alt={imgData.altText}  fill/>
             </Link>
-          </div>
         ))}
 
-        {/* <div className="main_logo_wraper">
-          <Link href="#" className="link">
+          {/* <Link href="#" className="link">
             <Image
               src="/assets/footerimges/sliderimges/01.png"
               alt="Picture of the author"
-              fill
+              width={200}
+              height={100}
+        
             />
           </Link>
-        </div>
-        <div className="main_logo_wraper">
+       
         <Link href="#" className="link">
           <Image
             src="/assets/footerimges/sliderimges/02.png"
             alt="Picture of the author"
-            fill
+            width={200}
+            height={100}
+           
           />
           </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
+          <Link href="#" className="link">
           <Image
-            src="/assets/footerimges/sliderimges/03.png"
+            src="/assets/footerimges/sliderimges/02.png"
             alt="Picture of the author"
-            fill
+            width={200}
+            height={100}
+           
           />
           </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
+          <Link href="#" className="link">
           <Image
-            src="/assets/footerimges/sliderimges/04.png"
+            src="/assets/footerimges/sliderimges/02.png"
             alt="Picture of the author"
-            fill
+            width={200}
+            height={100}
+           
           />
           </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
+          <Link href="#" className="link">
           <Image
-            src="/assets/footerimges/sliderimges/05.png"
+            src="/assets/footerimges/sliderimges/02.png"
             alt="Picture of the author"
-            fill
+            width={200}
+            height={100}
+           
           />
-          </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
-          <Image
-            src="/assets/footerimges/sliderimges/06.png"
-            alt="Picture of the author"
-            fill
-          />
-          </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
-          <Image
-            src="/assets/footerimges/sliderimges/07.png"
-            alt="Picture of the author"
-            fill
-          />
-          </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
-          <Image
-            src="/assets/footerimges/sliderimges/08.png"
-            alt="Picture of the author"
-            fill
-          />
-          </Link>
-        </div>
-        <div className="main_logo_wraper">
-        <Link href="#" className="link">
-          <Image
-            src="/assets/footerimges/sliderimges/09.png"
-            alt="Picture of the author"
-            fill
-          />
-          </Link>
-        </div> */}
+          </Link> */}
+      
       </Slider>
     </div>
   );
