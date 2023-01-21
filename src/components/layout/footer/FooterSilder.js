@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import img from "../../../../public/assets/footerimges/sliderimges/01.png";
 
-export default function SimpleSlider() {
+const SimpleSlider = () => {
   var settings = {
     dots: false,
     speed: 500,
@@ -74,3 +74,4 @@ export default function SimpleSlider() {
     </div>
   );
 }
+export default SimpleSlider 
