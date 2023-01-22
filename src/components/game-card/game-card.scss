@@ -1,0 +1,122 @@
+@mixin tag {
+    background-color: $color_yellow;
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    font-style: italic;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+@mixin content_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin text {
+    position: absolute;
+    bottom: 3.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    font-weight: 600;
+    color: $color_grey-20;
+}
+
+.game_card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    p {
+        @include text;
+    }
+
+    .text_hover {
+        @include text;
+        display: none
+    }
+
+    .tag_top {
+        @include tag;
+        top: 0;
+        border-radius: 1rem 0px 1.5rem 0px;
+    }
+
+    .tag_bottom {
+        @include tag;
+        // background-color: $color_yellow;
+        border-radius: 0px 1.5rem 0px 1.1rem;
+        bottom: 0;
+    }
+
+    .info_icon {
+        display: none;
+        position: absolute;
+        right: 5%;
+        bottom: 3%;
+        transition: all 0.5s ease-in-out;
+        z-index: 2;
+    }
+
+    .layer {
+        position: absolute;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+
+    .play_btn {
+        width: 68px;
+        height: 68px;
+        @include content_center;
+        background-color: $color_red;
+        border-radius: 50%;
+        z-index: 2;
+        display: none;
+
+        svg {
+            @include content_center;
+        }
+    }
+
+    h4 {
+        display: none;
+        font-size: 1rem;
+        font-weight: 600;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        z-index: 2;
+    }
+
+    &:hover {
+        .info_icon {
+            display: block;
+        }
+
+        .layer {
+            background-color: rgba(27, 34, 51, .8);
+        }
+
+        .play_btn {
+            display: block;
+        }
+
+        h4 {
+            display: block;
+        }
+
+        .text_hover {
+            display: block;
+            z-index: 5;
+        }
+    }
+}

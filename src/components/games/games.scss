@@ -1,0 +1,25 @@
+.games {
+    margin: 25px 0 20px;
+
+    h4 {
+        color: $color_grey-20;
+        font-weight: 600;
+        font-size: 16px;
+        white-space: nowrap;
+        text-transform: capitalize;
+
+        &:hover {
+            color: $color_white;
+        }
+    }
+
+    .btn_gray {
+        color: $color_grey-20;
+        background-color: $color_grey-100;
+        border-radius: 10px;
+        font-size: 12px;
+        padding: 6px 10px;
+        border: none;
+        outline: none;
+    }
+}

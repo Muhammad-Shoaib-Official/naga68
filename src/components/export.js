@@ -7,3 +7,6 @@ export { default as Logo } from './Logo';
 export { default as HeaderComp } from './hero';
 export { default as TopFeatures } from "./top-feature"
 export { default as Statistics } from "./statistics"
+export { default as GameCard } from "./game-card"
+export { default as Games } from "./games"
+export { default as DynamicSlider } from "./dynamicSlider"
