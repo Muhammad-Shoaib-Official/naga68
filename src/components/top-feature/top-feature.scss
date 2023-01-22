@@ -4,18 +4,17 @@
     padding: 10px;
     margin-bottom: 16px;
     position: relative;
-    z-index: 3;
+    // z-index: 3;
     min-height: 228px;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 
     .top-features_grid {
         display: grid;
-        grid-gap: 12px;
+        // grid-gap: 12px;
         gap: 12px;
         border-radius: 12px;
         overflow: hidden;
-        grid-template-areas:
-            "win_real win_real welcom_bonus welcom_bonus naga_charges free_crypto"
+        grid-template-areas: "win_real win_real welcom_bonus welcom_bonus naga_charges free_crypto"
             "cash_back rack_back welcom_bonus welcom_bonus mining mining";
 
         @media screen and (min-width:601px) and (max-width:900px) {
@@ -39,12 +38,12 @@
             background-color: $color_grey-80;
             border-radius: 5px;
             // padding: 0;
-            // width: 100%;
+            width: 100%;
             // transition: background-color .1s ease-in-out;
             // flex: 1;
             // background-color: red;
             // max-width: 180px;
-            box-sizing: border-box;
+            // box-sizing: border-box;
             background-position: right;
             background-repeat: no-repeat;
 
@@ -53,7 +52,7 @@
                 color: #fff;
                 z-index: 1;
                 padding: 33px 0 33px 15px;
-                max-width: 120px;
+                max-width: 140px;
             }
         }
 
