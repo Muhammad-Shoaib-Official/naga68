@@ -7,7 +7,7 @@ import { game1, infoIcon } from '../../../public/assets/export'
 
 const GameCard = ({ game }) => {
     return (
-        <Box key={game?.title} className="game_card uppercase" width={162} height={214} borderRadius={4} sx={{ backgroundImage: `url(${game?.image.src})` }}>
+        <Box key={game?.title} className="game_card uppercase" height={214} borderRadius={4} sx={{ backgroundImage: `url(${game?.image.src})` }}>
             <h4>{game?.title}</h4>
             <p> bet naga</p>
             <p className='text_hover'> {game?.subTitle}</p>

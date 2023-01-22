@@ -6,11 +6,12 @@ const DynamicSlider = ({ children }) => {
     var settings = {
         dots: false,
         speed: 500,
-        slidesToShow: 7,
+        slidesToShow: 6,
         slidesToScroll: 1,
         initialSlide: 0,
         infinite: false,
         autoplay: false,
+        lazyLoad: true,
         arrows: true,
         responsive: [
             {
