@@ -203,7 +203,7 @@ const SignupModal = (props) => {
                                                     <p>By accessing the site, I confirm that I am 18 years old and I have read the <Link className="link" href="#">terms of service</Link></p>
                                                 </div>
                                                 <div className="agrement_accpt">
-                                                    <p className="fw-600" style={{ color: "#fff" }}>Don't you have an account <Link className="link" href="#">Sign Up</Link></p>
+                                                    <p className="fw-600" style={{ color: "#fff" }}>Dont you have an account <Link className="link" href="#">Sign Up</Link></p>
 
                                                 </div>
 
@@ -211,7 +211,7 @@ const SignupModal = (props) => {
                                         </form>
                                     </TabPanel>
                                     <TabPanel value={value} index={1}>
-                                        <h6 style={{color:"red"}}>Note! working on this form yet </h6>
+                                        <h6 style={{ color: "red" }}>Note! working on this form yet </h6>
                                         <form>
                                             <div className="form_main_wraper">
                                                 <div className="inpt_wraper">
@@ -277,7 +277,7 @@ const SignupModal = (props) => {
                                                     <p>By accessing the site, I confirm that I am 18 years old and I have read the <Link className="link" href="#">terms of service</Link></p>
                                                 </div>
                                                 <div className="agrement_accpt">
-                                                    <p className="fw-600" style={{ color: "#fff" }}>Don't you have an account <Link className="link" href="#">Sign Up</Link></p>
+                                                    <p className="fw-600" style={{ color: "#fff" }}>Dont you have an account <Link className="link" href="#">Sign Up</Link></p>
 
                                                 </div>
 
