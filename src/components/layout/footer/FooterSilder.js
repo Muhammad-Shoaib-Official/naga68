@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
-import {imgPath} from "./SliderImagesmock";
+import { imgPath } from "./SliderImagesmock";
 
 const SimpleSlider = () => {
   var settings = {
@@ -44,9 +44,9 @@ const SimpleSlider = () => {
   return (
     <div className="silder_mainn">
       <Slider {...settings}>
-        {imgPath.map((data)=>(
+        {imgPath.map((data) => (
           <Link key={data.id} href={data.linkPath} className="_link">
-              <Image className="apply_grayScal" src={data.imgpath} alt={data.altText} fill />
+            <Image className="apply_grayScal" src={data.imgpath} alt={data.altText} fill />
           </Link>
         ))}
       </Slider>
