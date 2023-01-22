@@ -29,7 +29,7 @@ const Navbar = () => {
                         </Box>
                     </Box>
 
-                    <CustomSwitch />
+                    {/* <CustomSwitch /> */}
                 </Box>
                 <Box className="flex-center" gap={1.5}>
                     <button className='btn btn-primary'>login</button>
