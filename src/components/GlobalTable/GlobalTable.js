@@ -5,11 +5,12 @@ import {
     TableCell,
     TableContainer,
     TableHead,
+    TablePagination,
     TableRow,
 } from "@mui/material";
 
 const GlobalTable = (props) => {
-    const { columns, requireCheckBox, tableData, setSelected, selected } = props;
+    const { columns, PaginationReq,headBG,requireCheckBox, tableData, setSelected, selected } = props;
 
     // const handleSelectAllCheckboxClick = (event) => {
     //     if (event.target.checked) {
@@ -39,12 +40,61 @@ const GlobalTable = (props) => {
     // };
 
     // const isSelected = (id) => selected.indexOf(id) !== -1;
+    const [page, setPage] = React.useState(0);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  
+    const handleChangePage = (event, newPage) => {
+      setPage(newPage);
+    };
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(+event.target.value);
+        setPage(0);
+      };
 
     return (
-        
+        <>
+         {PaginationReq && <TablePagination
+         className="paginATION"
+         rowsPerPageOptions={[10, 25, 100]}
+         component="div"
+         count={tableData.length}
+         rowsPerPage={rowsPerPage}
+         page={page}
+         onPageChange={handleChangePage}
+         onRowsPerPageChange={handleChangeRowsPerPage}
+         nextIconButtonProps={{ style: { display: "none" } }}
+         backIconButtonProps={{ style: { display: "none" } }}
+         labelRowsPerPage=''
+         sx={{
+            "& .MuiInputBase-root": {
+                marginRight: "0",
+            },
+            // "&.MuiOutlinedInput-root": {
+            //     "& fieldset": {
+            //         border: '2px solid #cccccc'
+            //     },
+            //     "&:hover fieldset": {
+            //         border: "2px solid #F78812",
+            //     },
+            //     "&.Mui-focused fieldset": {
+            //         border: "2px solid #F78812",
+            //     }
+            // },
+            '.MuiSvgIcon-root ': {
+                fill: "#A0A3BD !important",
+              
+            },
+            // "& .MuiSelect-select .notranslate::after": {
+            //     content: `"Select"`,
+            //     opacity: 0.42,
+            //     paddingLeft: "2px",
+            //     fontSize: "14px",
+            //   },
+         }}
+       /> }
         <TableContainer className='table-container'>
             <Table className='table'>
-                <TableHead className='table-head'>
+                <TableHead className='table-head' sx={{backgroundColor: headBG ? "#0d131c": "transparent", borderBottom: headBG ? "none": "red",}}>
                     <TableRow className='table-row'>
                         {/* {requireCheckBox && <TableCell className='table-cell'>
                             <input className='input-checkbox' type='checkbox'
@@ -53,12 +103,12 @@ const GlobalTable = (props) => {
                             />
                         </TableCell>} */}
                         {columns.map((data, i) =>
-                            <TableCell className='table-cell' key={i}>{data.title}</TableCell>
+                            <TableCell sx={{borderBottom:"red"}} className='table-cell' key={i}>{data.title}</TableCell>
                         )}
                     </TableRow>
                 </TableHead>
                 <TableBody className='table-body'>
-                    {tableData?.map((data, i) =>
+                    {tableData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((data, i) =>
                         <TableRow key={i} className='table-row'>
                             {/* {requireCheckBox &&
                                 <TableCell className='table-cell'>
@@ -74,6 +124,8 @@ const GlobalTable = (props) => {
                 </TableBody>
             </Table>
         </TableContainer>
+        
+       </>
     )
 }
 

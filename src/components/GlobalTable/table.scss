@@ -1,10 +1,23 @@
+.paginATION{
+    .MuiTablePagination-displayedRows{
+        display: none;
+    }
+    .MuiTablePagination-select{
+        background-color:$color_grey-100;
+        color: $color_white;
+        border-radius: 10px;
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+}
 .table-container {
     .table {
         .table-head {
-            background:$color_background-main;
+            // background:$color_background-main;
+            // border-bottom: 1px solid red;
             .table-row {
                 .table-cell {
-                    border: none;
+                    // border: none;
                     color: $color_grey-40;
                     font-weight: 500;
                     font-size: 12px;

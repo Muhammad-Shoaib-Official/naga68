@@ -46,6 +46,132 @@ const tableMock = [
         payoutImg: "/assets/battelTornament/USDT.svg",
         payoutAmount: 2.896778567,
     },
+    {
+        id: 4,
+        diceImg: "/assets/battelTornament/dice.svg",
+        dicename: 'Dice',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/0.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/DOGE.svg",
+        betAmount: 0.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/DOGE.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 5,
+        diceImg: "/assets/battelTornament/dice.svg",
+        dicename: 'Dice',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/1.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/BFG.svg",
+        betAmount: 0.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/BFG.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 6,
+        diceImg: "/assets/battelTornament/limbo.svg",
+        dicename: 'Limbo',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/2.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/USDT.svg",
+        betAmount: 3.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/USDT.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 7,
+        diceImg: "/assets/battelTornament/dice.svg",
+        dicename: 'Dice',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/0.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/DOGE.svg",
+        betAmount: 0.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/DOGE.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 8,
+        diceImg: "/assets/battelTornament/dice.svg",
+        dicename: 'Dice',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/1.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/BFG.svg",
+        betAmount: 0.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/BFG.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 9,
+        diceImg: "/assets/battelTornament/limbo.svg",
+        dicename: 'Limbo',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/2.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/USDT.svg",
+        betAmount: 3.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/USDT.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 10,
+        diceImg: "/assets/battelTornament/dice.svg",
+        dicename: 'Dice',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/0.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/DOGE.svg",
+        betAmount: 0.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/DOGE.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 11,
+        diceImg: "/assets/battelTornament/dice.svg",
+        dicename: 'Dice',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/1.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/BFG.svg",
+        betAmount: 0.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/BFG.svg",
+        payoutAmount: 2.896778567,
+    },
+    {
+        id: 12,
+        diceImg: "/assets/battelTornament/limbo.svg",
+        dicename: 'Limbo',
+        time: "5:30:51 PM",
+        playerName: "User1234",
+        playerImg: "/assets/battelTornament/2.svg",
+        playerCount: 9,
+        betImg: "/assets/battelTornament/USDT.svg",
+        betAmount: 3.00002,
+        multiplyerAmount: 2.09797665,
+        payoutImg: "/assets/battelTornament/USDT.svg",
+        payoutAmount: 2.896778567,
+    },
 ]
 const columns = [
     {
@@ -133,7 +259,7 @@ function changeID(index) {
         "aria-controls": `simple-tabpanel-${index}`,
     };
 }
-const HightlingthsTable = () => {
+const HightlingthsTable = (props) => {
 
     const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => setValue(newValue);
@@ -191,13 +317,13 @@ const HightlingthsTable = () => {
                         </Tabs>
                     </Box>
                     <TabPanel value={value} index={0}>
-                        <GlobalTable tableData={tableMock} columns={columns} />
+                        <GlobalTable tableData={tableMock} columns={columns} PaginationReq headBG />
                     </TabPanel>
                     <TabPanel value={value} index={1}>
-                        <GlobalTable tableData={tableMock} columns={columns} />
+                        <GlobalTable tableData={tableMock} columns={columns} PaginationReq  headBG/>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
-                        <GlobalTable tableData={tableMock} columns={columns} />
+                        <GlobalTable tableData={tableMock} columns={columns}  PaginationReq headBG/>
                     </TabPanel>
                 </Grid>
             </Grid>
