@@ -6,7 +6,7 @@ import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
 import { gammingLinks, FeatueLinks, promoLinks, aboutusLinks, helpLinks, socialIcon } from "./FooterMockData"
 
-import SimpleSlider from "./footerSilder";
+import SimpleSlider from "./FooterSilder";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -25,11 +25,11 @@ const Footer = () => {
             <div className="footer_colum_content_wrapper">
               <div className="footer_linK_label_wraper flex-between ">
                 <p className="main_top_heading">I-gaming</p>
-                {!min_600  && 
+                {!min_600 &&
                   <p onClick={handleMobilClick}>click</p>
                 }
               </div>
-              {min_600  && 
+              {min_600 &&
                 <ul>
                   {gammingLinks.map((linkData) => (
                     <li key={linkData.id}>
@@ -49,11 +49,11 @@ const Footer = () => {
             <div className="footer_colum_content_wrapper">
               <div className="footer_linK_label_wraper flex-between ">
                 <p>Features</p>
-                {!min_600 && 
+                {!min_600 &&
                   <p onClick={handleMobilClick}>click</p>
                 }
               </div>
-              {min_600  &&
+              {min_600 &&
                 <ul>
                   {FeatueLinks.map((linkData) => (
                     <li key={linkData.id}>
@@ -77,7 +77,7 @@ const Footer = () => {
                   <p onClick={handleMobilClick}>click</p>
                 }
               </div>
-              {min_600 && 
+              {min_600 &&
                 <ul>
                   {promoLinks.map((linkData) => (
                     <li key={linkData.id}>
@@ -102,7 +102,7 @@ const Footer = () => {
                 }
               </div>
 
-              {min_600 && 
+              {min_600 &&
                 <ul>
                   {aboutusLinks.map((linkData) => (
                     <li key={linkData.id}>
@@ -122,11 +122,11 @@ const Footer = () => {
             <div className="footer_colum_content_wrapper">
               <div className="footer_linK_label_wraper flex-between ">
                 <p>Help</p>
-                {!min_600 && 
+                {!min_600 &&
                   <p onClick={handleMobilClick}>click</p>
                 }
               </div>
-              {min_600 && 
+              {min_600 &&
                 <ul>
                   {helpLinks.map((linkData) => (
                     <li key={linkData.id}>
