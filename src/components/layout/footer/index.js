@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import img from "../../../../public/assets/footerimges/f1.png";
 import img2 from "../../../../public/assets/footerimges/f2.png";
 import { gammingLinks, FeatueLinks, promoLinks, aboutusLinks, helpLinks, socialIcon } from "./FooterMockData"
-
 import SimpleSlider from "./FooterSilder";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import useMediaQuery from '@mui/material/useMediaQuery';

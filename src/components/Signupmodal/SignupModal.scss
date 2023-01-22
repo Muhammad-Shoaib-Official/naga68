@@ -1,0 +1,197 @@
+.Sign_in_up_modal {
+    .content {
+        padding: 0;
+
+        .signup_wraper_left_side {
+            min-height: 550px;
+            background-image: url("../../../public/assets/modalimg/modlimg.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding: 40px 20px 0;
+            text-align: center;
+
+            .modal_intro_lable {
+                display: inline-block;
+                background-color: $color_yellow_2;
+                box-shadow: 0 8.4px 16px -8.4px rgb(0 0 0 / 8%);
+                border-radius: 12px;
+                padding: 6px 10px;
+                margin-bottom: 20px;
+
+                p {
+                    margin: 0;
+                    font-size: $fs-12;
+                    line-height: 110%;
+                    letter-spacing: .02em;
+                    text-transform: uppercase;
+                    color: $modal-intro-color_label;
+                }
+            }
+
+            .h4 {
+                font-weight: 900;
+                font-size: $fs-24;
+                color: $color_white;
+                line-height: 110%;
+                letter-spacing: .02em;
+                text-transform: uppercase;
+
+                span {
+                    color: $color_yellow_2;
+                }
+            }
+        }
+
+        .modal_intro_signup_form {
+            padding: 32px;
+
+            .form_main_wraper {
+
+                .inpt_wraper {
+                    margin-bottom: 20px;
+                    position: relative;
+
+                    .input_Icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translateY(-50%);
+                        color: $color_grey-40;
+                    }
+
+                    .input_password_icon {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        color: $color_white;
+                        background-color: $color_blue_hover;
+                        padding: 5px;
+                        font-size: 14px;
+                        border-radius: 6px;
+                        cursor: pointer;
+
+
+                    }
+
+                    .Custom_input {
+                        line-height: 20px;
+                        font-size: $fs-14;
+                        height: 44px;
+                        border-radius: 10px;
+                        padding: 0 40px 0px 45px;
+                        border: none;
+                        outline: 2px solid $color_grey-60;
+                        background-color: transparent;
+                        color: $color_white;
+                        transition: all 0.3s ease-in-out;
+                        width: 100%;
+                        box-sizing: border-box;
+
+                        &:hover {
+                            outline: 2px solid $color_grey-40;
+
+                        }
+                    }
+
+                    .forGot_link {
+                        text-decoration: underline;
+                        color: $color_blue;
+                        font-size: 11px;
+
+                        &:hover {
+                            color: $color_blue_hover;
+                        }
+
+                    }
+
+                }
+
+                .button_wrapper {
+                    margin-bottom: 30px;
+
+                    .Login_btn {
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+
+                .other_to_Signup {
+                    margin-bottom: 15px;
+                    .other_link_text {
+                        color: $color_grey-40;
+                        font-size: 11px;
+                        margin-bottom: 8px;
+                    }
+                    .social_media_wraper {
+                        flex-wrap: wrap;
+                        .social_icon_wrapper_inner {
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            ._icon_styled_div {
+                                cursor: pointer;
+                                background: $bg_gradiant_blue;
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 8px;
+                                margin: 0 4px;
+                                transition: all .3s;
+                                &:hover {
+                                    transform: scale(1.15);
+                                }
+                                &:nth-child(2) {
+                                    background: $color_white;
+                                }
+                                &:nth-child(3) {
+                                    background: $bg_youtob_Gradiant;
+                                }
+                                &:nth-child(4) {
+                                    background: $color_white;
+                                }
+                                &:nth-child(5) {
+                                    background: #1e2025;
+                                }
+                                &:nth-child(6) {
+                                    background: #d9b432;
+                                }
+                                &:nth-child(7) {
+                                    background: $bg_tiktok_rgadiant;
+                                }
+                                &:nth-child(8) {
+                                    background: $bg_youtob_Gradiant;
+                                }
+                                &:nth-child(9) {
+                                    background: $bg_discord_gradiant;
+                                }
+                                &:nth-child(10) {
+                                    background: $bg_reddit_gradiant;
+                                }
+                            }
+                        }
+                    }
+                }
+                .agrement_accpt{
+                    margin-bottom: 20px;
+                    p{
+                        font-size: 11px;
+                        color: $color_grey-40;
+                        line-height: 1.2;
+                        .link{
+                            color: $color_blue;
+                            &:hover{
+                                color: $color_blue_hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
