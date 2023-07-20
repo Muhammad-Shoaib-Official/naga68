@@ -178,7 +178,7 @@ const columns = [
         title: 'Name',
         render: (data) =>
             <div className='nameColum'>
-                <Image className='img' width={22} height={22} src={data.diceImg} />
+                <Image className='img' width={22} height={22} src={data.diceImg} alt='icon-image2' />
                 <span className='name fw-600'>{data.dicename}</span>
             </div>
     },
@@ -208,7 +208,7 @@ const columns = [
                         }
                     }}
                 >
-                    <Image fill className='img_circle' src={data.playerImg} /></Badge>
+                    <Image fill className='img_circle' src={data.playerImg} alt='icon-image3' /></Badge>
                 <span className='name fw-600'>{data.playerName}</span>
             </div>
     },
@@ -216,7 +216,7 @@ const columns = [
         title: 'Bet Amount',
         render: (data) => <div className='betamoutn_colum'>
             <div className='bet_icon_image'>
-                <Image src={data.betImg} fill />
+                <Image src={data.betImg} fill alt='icon-image3' />
             </div>
             <span className='bet_amount'>{data.betAmount}</span>
         </div>
@@ -229,7 +229,7 @@ const columns = [
         title: 'Payout',
         render: (data) => <div className='betamoutn_colum'>
             <div className='bet_icon_image'>
-                <Image src={data.betImg} fill />
+                <Image src={data.betImg} fill alt='icon-image4' />
             </div>
             <span className='bet_amount'>{data.betAmount}</span>
         </div>

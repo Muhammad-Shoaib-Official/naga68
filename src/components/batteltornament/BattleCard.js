@@ -51,7 +51,7 @@ const columns = [
         title: 'Name',
         render: (data) =>
             <div className='nameColum'>
-                <Image className='img' width={22} height={22} src={data.diceImg} />
+                <Image className='img' width={22} height={22} src={data.diceImg} alt={"icon-img"} />
                 <span className='name fw-600'>{data.dicename}</span>
             </div>
     },
