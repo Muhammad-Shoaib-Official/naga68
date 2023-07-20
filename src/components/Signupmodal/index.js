@@ -211,7 +211,7 @@ const SignupModal = (props) => {
                                         </form>
                                     </TabPanel>
                                     <TabPanel value={value} index={1}>
-                                        <h6 style={{color:"red"}}>Note! working on this form yet </h6>
+                                        <h6 style={{ color: "red" }}>Note! working on this form yet </h6>
                                         <form>
                                             <div className="form_main_wraper">
                                                 <div className="inpt_wraper">
